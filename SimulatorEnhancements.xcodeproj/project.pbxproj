@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */; };
 		7224AD8D18B9DEE4006F0138 /* CEMotionEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */; };
-		7224AD8E18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */; };
 		7224AD8F18B9DEE4006F0138 /* CMMotionManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */; };
 		7224AD9218B9DEEE006F0138 /* CEBaseManagerEnhancement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD9118B9DEEE006F0138 /* CEBaseManagerEnhancement.m */; };
 		7224AD9818B9DEF6006F0138 /* CESwizzleUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224AD9518B9DEF6006F0138 /* CESwizzleUtils.m */; };
@@ -31,6 +30,8 @@
 		729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */; };
 		AD9182372187443C005B60F6 /* CMMotionActivityManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */; };
 		AD91823D218744BE005B60F6 /* CMActivityManagerEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */; };
+		ADCE2A37218756300028DAFA /* FakeMotionActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCE2A36218756300028DAFA /* FakeMotionActivity.m */; };
+		ADCE2A3A218756A50028DAFA /* FakeAccelerationData.m in Sources */ = {isa = PBXBuildFile; fileRef = ADCE2A39218756A50028DAFA /* FakeAccelerationData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,6 @@
 		7224AD4218B3BA7C006F0138 /* CELocationEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CELocationEnhancements.m; path = Extensions/Location/CELocationEnhancements.m; sourceTree = "<group>"; };
 		7224AD8718B9DEE4006F0138 /* CEMotionEnhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEMotionEnhancements.h; sourceTree = "<group>"; };
 		7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEMotionEnhancements.m; sourceTree = "<group>"; };
-		7224AD8918B9DEE4006F0138 /* CMAccelerometerData+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMAccelerometerData+Enhancements.h"; sourceTree = "<group>"; };
-		7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMAccelerometerData+Enhancements.m"; sourceTree = "<group>"; };
 		7224AD8B18B9DEE4006F0138 /* CMMotionManager+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+Enhancements.h"; sourceTree = "<group>"; };
 		7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+Enhancements.m"; sourceTree = "<group>"; };
 		7224AD9018B9DEEE006F0138 /* CEBaseManagerEnhancement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CEBaseManagerEnhancement.h; path = Extensions/CEBaseManagerEnhancement.h; sourceTree = "<group>"; };
@@ -83,6 +82,10 @@
 		AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CMMotionActivityManager+Enhancements.m"; sourceTree = "<group>"; };
 		AD91823B218744BE005B60F6 /* CMActivityManagerEnhancements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMActivityManagerEnhancements.h; sourceTree = "<group>"; };
 		AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMActivityManagerEnhancements.m; sourceTree = "<group>"; };
+		ADCE2A35218756300028DAFA /* FakeMotionActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeMotionActivity.h; sourceTree = "<group>"; };
+		ADCE2A36218756300028DAFA /* FakeMotionActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeMotionActivity.m; sourceTree = "<group>"; };
+		ADCE2A38218756A50028DAFA /* FakeAccelerationData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeAccelerationData.h; sourceTree = "<group>"; };
+		ADCE2A39218756A50028DAFA /* FakeAccelerationData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeAccelerationData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +118,10 @@
 			children = (
 				7224AD8718B9DEE4006F0138 /* CEMotionEnhancements.h */,
 				7224AD8818B9DEE4006F0138 /* CEMotionEnhancements.m */,
-				7224AD8918B9DEE4006F0138 /* CMAccelerometerData+Enhancements.h */,
-				7224AD8A18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m */,
 				7224AD8B18B9DEE4006F0138 /* CMMotionManager+Enhancements.h */,
 				7224AD8C18B9DEE4006F0138 /* CMMotionManager+Enhancements.m */,
+				ADCE2A38218756A50028DAFA /* FakeAccelerationData.h */,
+				ADCE2A39218756A50028DAFA /* FakeAccelerationData.m */,
 			);
 			name = Motion;
 			path = Extensions/Motion;
@@ -225,6 +228,8 @@
 				AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */,
 				AD9182352187443C005B60F6 /* CMMotionActivityManager+Enhancements.h */,
 				AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */,
+				ADCE2A35218756300028DAFA /* FakeMotionActivity.h */,
+				ADCE2A36218756300028DAFA /* FakeMotionActivity.m */,
 			);
 			name = Activity;
 			path = Extensions/Activity;
@@ -342,8 +347,9 @@
 				AD91823D218744BE005B60F6 /* CMActivityManagerEnhancements.m in Sources */,
 				729EC03518B14E3900BBED63 /* CEViewController.m in Sources */,
 				7224AD8D18B9DEE4006F0138 /* CEMotionEnhancements.m in Sources */,
-				7224AD8E18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m in Sources */,
 				7224AD4318B3BA7C006F0138 /* CELocationEnhancements.m in Sources */,
+				ADCE2A3A218756A50028DAFA /* FakeAccelerationData.m in Sources */,
+				ADCE2A37218756300028DAFA /* FakeMotionActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

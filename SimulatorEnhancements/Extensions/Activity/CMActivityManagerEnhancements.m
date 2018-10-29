@@ -9,23 +9,16 @@
 #import "CMActivityManagerEnhancements.h"
 #import "CESwizzleUtils.h"
 #import <CoreMotion/CoreMotion.h>
+#import "CMMotionActivityManager+Enhancements.h"
+#import "FakeMotionActivity.h"
 
 @implementation CMActivityManagerEnhancements
 
 - (void)receiveSimulatorData:(NSDictionary *)data {
-#warning TODO
-	
-//	CMAcceleration acc;
-//	acc.x = [[jsonData objectForKey:@"x"] doubleValue];
-//	acc.y = [[jsonData objectForKey:@"y"] doubleValue];
-//	acc.z = [[jsonData objectForKey:@"z"] doubleValue];
-//
-//	CMAccelerometerData *data = [[CMAccelerometerData alloc] init];
-//	[data simx_setAcceleration:acc];
-//
-//	for (CMMotionManager *motionManager in [self getManagers]) {
-//		[motionManager simx_accelerometerUpdate:data];
-//	}
+	CMMotionActivity *activity = [FakeMotionActivity activityWithData:data];
+	for (CMMotionActivityManager *manager in [self getManagers]) {
+		[manager simx_setMotionActivity:activity];
+	}
 }
 
 - (void)enable {

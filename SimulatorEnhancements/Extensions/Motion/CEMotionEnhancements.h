@@ -13,7 +13,7 @@
 
 - (void)enable;
 
-- (void)receiveSimulatorData:(NSArray *)data;
+- (void)receiveSimulatorData:(NSDictionary *)data;
 
 + (CEMotionEnhancements *)instance;
 

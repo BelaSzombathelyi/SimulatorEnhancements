@@ -10,19 +10,13 @@
 #import "CESwizzleUtils.h"
 #import "CMMotionManager+Enhancements.h"
 #import "NSDictionary+Helpers.h"
-#import "CMAccelerometerData+Enhancements.h"
+#import "FakeAccelerationData.h"
 
 @implementation CEMotionEnhancements
 
 - (void)receiveSimulatorData:(NSDictionary *)jsonData {
-  CMAcceleration acc;
-  acc.x = [[jsonData objectForKey:@"x"] doubleValue];
-  acc.y = [[jsonData objectForKey:@"y"] doubleValue];
-  acc.z = [[jsonData objectForKey:@"z"] doubleValue];
-  
-  CMAccelerometerData *data = [[CMAccelerometerData alloc] init];
-  [data simx_setAcceleration:acc];
-  
+	//Unfortunetelly needed this unsafe cast
+  CMAccelerometerData *data = (CMAccelerometerData *)[FakeAccelerationData accelerationWithData:jsonData];
   for (CMMotionManager *motionManager in [self getManagers]) {
     [motionManager simx_accelerometerUpdate:data];
   }

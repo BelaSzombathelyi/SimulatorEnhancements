@@ -10,20 +10,17 @@
 #import "CEMotionEnhancements.h"
 #import <objc/runtime.h>
 
-#define HANDLER_IDENTIFIER @"accelerometerHandler"
+static const void * const kHandlerKey = &kHandlerKey;
 
 @implementation CMMotionManager (Enhancements)
 
 - (void)simx_accelerometerUpdate:(CMAccelerometerData *)accelerometerData {
-  CMAccelerometerHandler handler = objc_getAssociatedObject(self, HANDLER_IDENTIFIER);
+  CMAccelerometerHandler handler = objc_getAssociatedObject(self, kHandlerKey);
   handler(accelerometerData, nil);
 }
 
--(void)override_startAccelerometerUpdatesToQueue:(NSOperationQueue *)queue
-                                     withHandler:(CMAccelerometerHandler)handler {
-
-  objc_setAssociatedObject(self, HANDLER_IDENTIFIER, handler, OBJC_ASSOCIATION_RETAIN);
-  
+-(void)override_startAccelerometerUpdatesToQueue:(NSOperationQueue *)queue withHandler:(CMAccelerometerHandler)handler {
+  objc_setAssociatedObject(self, kHandlerKey, handler, OBJC_ASSOCIATION_RETAIN);
   [[CEMotionEnhancements instance] addManager:self];
 }
 
