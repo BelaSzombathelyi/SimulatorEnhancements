@@ -22,11 +22,11 @@
 
 - (void)receiveSimulatorData:(NSString *)data {
   NSData* resultData = [data dataUsingEncoding:NSUTF8StringEncoding];
-  NSError* error = [NSError new];
+  NSError* error = nil;
   NSDictionary* json = [NSJSONSerialization JSONObjectWithData:resultData
                                                        options:kNilOptions
                                                          error:&error];
-  
+	
   if ([json objectForKey:@"location"]) {
     [[CELocationEnhancements instance] receiveSimulatorData:json[@"location"]];
   }
