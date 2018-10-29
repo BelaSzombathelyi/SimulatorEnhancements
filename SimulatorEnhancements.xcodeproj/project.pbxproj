@@ -29,6 +29,8 @@
 		729EC05418B14E5300BBED63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729EC05318B14E5300BBED63 /* CoreLocation.framework */; };
 		729EC05B18B14F6100BBED63 /* CESimulatorEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */; };
 		729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */; };
+		AD9182372187443C005B60F6 /* CMMotionActivityManager+Enhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */; };
+		AD91823D218744BE005B60F6 /* CMActivityManagerEnhancements.m in Sources */ = {isa = PBXBuildFile; fileRef = AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,10 @@
 		729EC05A18B14F6100BBED63 /* CESimulatorEnhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CESimulatorEnhancements.m; path = Extensions/CESimulatorEnhancements.m; sourceTree = "<group>"; };
 		729EC05F18B1514100BBED63 /* CLLocationManager+Enhancements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+Enhancements.h"; path = "Extensions/Location/CLLocationManager+Enhancements.h"; sourceTree = "<group>"; };
 		729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+Enhancements.m"; path = "Extensions/Location/CLLocationManager+Enhancements.m"; sourceTree = "<group>"; };
+		AD9182352187443C005B60F6 /* CMMotionActivityManager+Enhancements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMMotionActivityManager+Enhancements.h"; sourceTree = "<group>"; };
+		AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CMMotionActivityManager+Enhancements.m"; sourceTree = "<group>"; };
+		AD91823B218744BE005B60F6 /* CMActivityManagerEnhancements.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMActivityManagerEnhancements.h; sourceTree = "<group>"; };
+		AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMActivityManagerEnhancements.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		729EC05718B14F0500BBED63 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AD91823A21874479005B60F6 /* Activity */,
 				7224AD8618B9DEE4006F0138 /* Motion */,
 				729EC05818B14F0A00BBED63 /* Location */,
 				7224AD9318B9DEF6006F0138 /* Util */,
@@ -209,6 +216,18 @@
 				729EC06018B1514100BBED63 /* CLLocationManager+Enhancements.m */,
 			);
 			name = Location;
+			sourceTree = "<group>";
+		};
+		AD91823A21874479005B60F6 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				AD91823B218744BE005B60F6 /* CMActivityManagerEnhancements.h */,
+				AD91823C218744BE005B60F6 /* CMActivityManagerEnhancements.m */,
+				AD9182352187443C005B60F6 /* CMMotionActivityManager+Enhancements.h */,
+				AD9182362187443C005B60F6 /* CMMotionActivityManager+Enhancements.m */,
+			);
+			name = Activity;
+			path = Extensions/Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Colin Eberhardt";
 				TargetAttributes = {
+					729EC01A18B14E3900BBED63 = {
+						DevelopmentTeam = EULTY76QB8;
+					};
 					729EC03B18B14E3900BBED63 = {
 						TestTargetID = 729EC01A18B14E3900BBED63;
 					};
@@ -313,9 +335,11 @@
 				729EC05B18B14F6100BBED63 /* CESimulatorEnhancements.m in Sources */,
 				729EC06118B1514100BBED63 /* CLLocationManager+Enhancements.m in Sources */,
 				7224AD9818B9DEF6006F0138 /* CESwizzleUtils.m in Sources */,
+				AD9182372187443C005B60F6 /* CMMotionActivityManager+Enhancements.m in Sources */,
 				729EC02B18B14E3900BBED63 /* main.m in Sources */,
 				7224AD9918B9DEF6006F0138 /* NSDictionary+Helpers.m in Sources */,
 				7224AD9218B9DEEE006F0138 /* CEBaseManagerEnhancement.m in Sources */,
+				AD91823D218744BE005B60F6 /* CMActivityManagerEnhancements.m in Sources */,
 				729EC03518B14E3900BBED63 /* CEViewController.m in Sources */,
 				7224AD8D18B9DEE4006F0138 /* CEMotionEnhancements.m in Sources */,
 				7224AD8E18B9DEE4006F0138 /* CMAccelerometerData+Enhancements.m in Sources */,
@@ -437,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = EULTY76QB8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimulatorEnhancements/SimulatorEnhancements-Prefix.pch";
 				INFOPLIST_FILE = "SimulatorEnhancements/SimulatorEnhancements-Info.plist";
@@ -450,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = EULTY76QB8;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimulatorEnhancements/SimulatorEnhancements-Prefix.pch";
 				INFOPLIST_FILE = "SimulatorEnhancements/SimulatorEnhancements-Info.plist";
