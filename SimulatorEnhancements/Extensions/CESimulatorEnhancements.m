@@ -9,6 +9,7 @@
 #import "CESimulatorEnhancements.h"
 #import "CELocationEnhancements.h"
 #import "CEMotionEnhancements.h"
+#import "CMActivityManagerEnhancements.h"
 
 @implementation CESimulatorEnhancements {
   NSTimer *_timer;
@@ -33,6 +34,9 @@
   if ([json objectForKey:@"accelerometer"]) {
     [[CEMotionEnhancements instance] receiveSimulatorData:json[@"accelerometer"]];
   }
+	if ([json objectForKey:@"activity"]) {
+		[[CMActivityManagerEnhancements instance] receiveSimulatorData:json[@"activity"]];
+	}
 }
 
 + (CESimulatorEnhancements *)instance {

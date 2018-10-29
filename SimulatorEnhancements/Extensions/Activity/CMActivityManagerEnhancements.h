@@ -12,7 +12,7 @@
 
 - (void)enable;
 
-- (void)receiveSimulatorData:(NSArray *)data;
+- (void)receiveSimulatorData:(NSDictionary *)data;
 
 + (CMActivityManagerEnhancements *)instance;
 

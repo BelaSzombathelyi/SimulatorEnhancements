@@ -12,7 +12,9 @@
 
 @implementation CMActivityManagerEnhancements
 
-- (void)receiveSimulatorData:(NSArray *)data {
+- (void)receiveSimulatorData:(NSDictionary *)data {
+#warning TODO
+	
 //	CMAcceleration acc;
 //	acc.x = [[jsonData objectForKey:@"x"] doubleValue];
 //	acc.y = [[jsonData objectForKey:@"y"] doubleValue];
