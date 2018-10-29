@@ -14,16 +14,17 @@
 #import "CEMotionEnhancements.h"
 
 @interface CEViewController () <CLLocationManagerDelegate>
+
 @property CMMotionManager *motionManager;
 @property CLLocationManager *location;
 
 @end
 
-@implementation CEViewController {
-}
 
-- (void)viewDidLoad
-{
+@implementation CEViewController
+
+- (void)viewDidLoad {
+	NSAssert(TARGET_IPHONE_SIMULATOR, @"Works only with simulator");
   	[super viewDidLoad];
 	self.motionManager = [CMMotionManager new];
 	[self.motionManager startAccelerometerUpdatesToQueue:NSOperationQueue.mainQueue withHandler:^(CMAccelerometerData * _Nullable accelerometerData, NSError * _Nullable error) {
