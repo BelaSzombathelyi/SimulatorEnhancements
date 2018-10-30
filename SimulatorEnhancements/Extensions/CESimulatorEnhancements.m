@@ -35,7 +35,10 @@
     [[CEMotionEnhancements instance] receiveSimulatorData:json[@"accelerometer"]];
   }
 	if ([json objectForKey:@"activity"]) {
-		[[CMActivityManagerEnhancements instance] receiveSimulatorData:json[@"activity"]];
+		NSDictionary *activity = json[@"activity"];
+		if ([activity[@"isFilled"] boolValue]) {
+			[[CMActivityManagerEnhancements instance] receiveSimulatorData:activity];
+		}
 	}
 }
 
