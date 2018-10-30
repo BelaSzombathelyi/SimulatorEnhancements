@@ -38,7 +38,7 @@
 }
 
 - (NSString *)description {
-#warning Add log!
+	return [NSString stringWithFormat:@"%@ @ x: %.02f, y: %.02f, z: %.02f", NSStringFromClass([self class]), _myAcceleration.x, _myAcceleration.y, _myAcceleration.z];
 }
 
 @end

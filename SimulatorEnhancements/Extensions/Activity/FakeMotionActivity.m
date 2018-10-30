@@ -63,4 +63,24 @@
 	return [self.data[@"cycling"] boolValue];
 }
 
+- (NSString *)description {
+	return [NSString stringWithFormat:@"%@ @ \
+			confidence: %@,\
+			unknown: %@,\
+			stationary: %@,\
+			walking: %@,\
+			running: %@,\
+			automotive: %@,\
+			cycling: %@",
+			NSStringFromClass([self class]),
+			@(self.confidence),
+			@(self.unknown),
+			@(self.stationary),
+			@(self.walking),
+			@(self.running),
+			@(self.automotive),
+			@(self.cycling)
+			];
+}
+
 @end
