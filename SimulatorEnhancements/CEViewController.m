@@ -42,6 +42,10 @@
 	self.location.delegate = self;
 	[self.location startUpdatingHeading];
 	
+	//Location/Region
+	CLLocationCoordinate2D center = {.latitude = 47.480351, .longitude = 19.066205 };
+	CLRegion *region = [[CLCircularRegion alloc] initWithCenter:center radius:200 identifier:@"test"];
+	[self.location startMonitoringForRegion:region];
 	
 	//Activity
 	[[CMActivityManagerEnhancements instance] enable];
@@ -56,6 +60,24 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
 	NSLog(@"[Location] %@", locations);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+	NSLog(@"[Location][DidEnterRegion] %@", region);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+	NSLog(@"[Location][DidExitRegion] %@", region);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region {
+	NSString *stateString = nil;
+	switch (state) {
+		case CLRegionStateUnknown:	stateString = @"CLRegionStateUnknown"; break;
+		case CLRegionStateInside:	stateString = @"CLRegionStateInside";  break;
+		case CLRegionStateOutside:	stateString = @"CLRegionStateOutside"; break;
+	}
+	NSLog(@"[Location][DidDetermineState] %@ %@", stateString, region);
 }
 
 @end

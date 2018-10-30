@@ -21,6 +21,8 @@
 - (void)enable {
   [CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"setDelegate:"];
   [CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"onClientEventLocation:"];
+	[CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"startMonitoringForRegion:"];
+	[CESwizzleUtils swizzleClass:[CLLocationManager class] method:@"stopMonitoringForRegion:"];
 }
 
 - (void)receiveSimulatorData:(NSDictionary *)locationData {
